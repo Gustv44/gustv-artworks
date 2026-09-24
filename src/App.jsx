@@ -13,7 +13,7 @@ import Contato from './pages/Contato'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/gustv-artworks">
 
       <ScrollToTop />
 
@@ -24,6 +24,7 @@ function App() {
       </div>
 
       <main className="site-content">
+
         <Routes>
 
           <Route
@@ -52,6 +53,7 @@ function App() {
           />
 
         </Routes>
+
       </main>
 
       <Footer />

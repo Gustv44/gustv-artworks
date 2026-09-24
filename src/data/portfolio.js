@@ -1,5 +1,8 @@
+import { assetPath } from '../utils/assetPath.js'
+
 const portfolio = [
-// =============================
+
+  // =============================
   // BANNERS
   // =============================
 
@@ -8,7 +11,9 @@ const portfolio = [
     titulo: 'Zero Society {Eren}',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/zero-society-eren-banner.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/zero-society-eren-banner.png'
+    ),
     descricao:
       'Banner desenvolvido para identidade visual de servidor, explorando composição, contraste, tipografia e tratamento de personagem.'
   },
@@ -18,7 +23,9 @@ const portfolio = [
     titulo: "Zero Society — Valentine's Day",
     categoria: 'banner',
     contexto: 'evento',
-    imagem: '/assets/portfolio/banners/valentines-day.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/valentines-day.png'
+    ),
     descricao:
       'Banner comemorativo desenvolvido para uma comunidade, trabalhando uma composição temática e tratamento visual romântico.'
   },
@@ -28,7 +35,9 @@ const portfolio = [
     titulo: 'Zero Society — Aniversário de 1 ano',
     categoria: 'banner',
     contexto: 'evento',
-    imagem: '/assets/portfolio/banners/aniversario-zero-society.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/aniversario-zero-society.png'
+    ),
     descricao:
       'Banner comemorativo criado para celebrar o aniversário de uma comunidade.'
   },
@@ -38,7 +47,9 @@ const portfolio = [
     titulo: 'Suporte (Zero Society) — Refeito',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/suporte-zero-society.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/suporte-zero-society.png'
+    ),
     descricao:
       'Projeto desenvolvido para apresentação de suporte, explorando composição, personagem e elementos decorativos.'
   },
@@ -48,7 +59,9 @@ const portfolio = [
     titulo: 'Privado (Gold Experience)',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/privado-gold-experience.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/privado-gold-experience.png'
+    ),
     descricao:
       'Banner desenvolvido para uma área privada de comunidade, utilizando composição temática e tratamento cromático.'
   },
@@ -58,7 +71,9 @@ const portfolio = [
     titulo: 'Suporte (Gold Experience 2)',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/suporte-gold-experience-2.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/suporte-gold-experience-2.png'
+    ),
     descricao:
       'Banner desenvolvido para uma seção de suporte de comunidade.'
   },
@@ -68,7 +83,9 @@ const portfolio = [
     titulo: 'Senku Ishigami',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/senku-ishigami.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/senku-ishigami.png'
+    ),
     descricao:
       'Estudo de composição e manipulação utilizando personagem, elementos gráficos e tratamento cromático.'
   },
@@ -78,7 +95,9 @@ const portfolio = [
     titulo: 'Kaneki',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/kaneki.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/kaneki.png'
+    ),
     descricao:
       'Estudo experimental de composição, iluminação e tratamento de personagem.'
   },
@@ -88,7 +107,9 @@ const portfolio = [
     titulo: 'Hatsune Miku',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/hatsune-miku.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/hatsune-miku.png'
+    ),
     descricao:
       'Estudo de composição visual com foco em cores, enquadramento e elementos gráficos.'
   },
@@ -98,7 +119,9 @@ const portfolio = [
     titulo: 'Monika',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/monika.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/monika.png'
+    ),
     descricao:
       'Projeto experimental de composição e manipulação digital.'
   },
@@ -108,7 +131,9 @@ const portfolio = [
     titulo: 'Yuri',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/yuri.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/yuri.png'
+    ),
     descricao:
       'Projeto experimental focado em composição, cores e identidade visual.'
   },
@@ -118,7 +143,9 @@ const portfolio = [
     titulo: 'Lord Nokuteshimo',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/lord-nokuteshimo.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/lord-nokuteshimo.png'
+    ),
     descricao:
       'Banner desenvolvido para comunidade, combinando personagem, tipografia e elementos decorativos.'
   },
@@ -128,7 +155,9 @@ const portfolio = [
     titulo: 'Zhu Yuan',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/zhu-yuan.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/zhu-yuan.png'
+    ),
     descricao:
       'Estudo de manipulação e composição utilizando personagem e elementos geométricos.'
   },
@@ -138,7 +167,9 @@ const portfolio = [
     titulo: 'Frieren',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/frieren.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/frieren.png'
+    ),
     descricao:
       'Estudo de composição, tratamento de cores e ambientação visual.'
   },
@@ -148,7 +179,9 @@ const portfolio = [
     titulo: 'Noob Saibot',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/noob-saibot.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/noob-saibot.png'
+    ),
     descricao:
       'Estudo visual com foco em contraste, iluminação e atmosfera.'
   },
@@ -158,7 +191,9 @@ const portfolio = [
     titulo: 'Vinsmoke Sanji',
     categoria: 'banner',
     contexto: 'estudo',
-    imagem: '/assets/portfolio/banners/vinsmoke-sanji.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/vinsmoke-sanji.png'
+    ),
     descricao:
       'Estudo de composição e tratamento cromático inspirado em personagem.'
   },
@@ -168,7 +203,9 @@ const portfolio = [
     titulo: 'Zero Society (Pokémon)',
     categoria: 'banner',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/banners/zero-society-pokemon.png',
+    imagem: assetPath(
+      'assets/portfolio/banners/zero-society-pokemon.png'
+    ),
     descricao:
       'Banner desenvolvido para identidade visual de comunidade.'
   },
@@ -183,7 +220,9 @@ const portfolio = [
     titulo: 'Zero Society {Eren} — Icon',
     categoria: 'icone',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/icones/zero-society-eren.png',
+    imagem: assetPath(
+      'assets/portfolio/icones/zero-society-eren.png'
+    ),
     descricao:
       'Ícone desenvolvido para identidade visual de servidor.'
   },
@@ -193,7 +232,9 @@ const portfolio = [
     titulo: "Zero Society — Valentine's Day — Icon",
     categoria: 'icone',
     contexto: 'evento',
-    imagem: '/assets/portfolio/icones/zero-society-valentines.png',
+    imagem: assetPath(
+      'assets/portfolio/icones/zero-society-valentines.png'
+    ),
     descricao:
       'Ícone temático desenvolvido para uma comunidade durante um evento comemorativo.'
   },
@@ -203,10 +244,13 @@ const portfolio = [
     titulo: 'Zero Society (Pokémon Ash) — Icon',
     categoria: 'icone',
     contexto: 'comunidade',
-    imagem: '/assets/portfolio/icones/zero-society-pokemon-ash.png',
+    imagem: assetPath(
+      'assets/portfolio/icones/zero-society-pokemon-ash.png'
+    ),
     descricao:
       'Ícone desenvolvido como estudo de identidade visual para comunidade.'
   }
+
 ]
 
 export default portfolio

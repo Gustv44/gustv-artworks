@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom"
-import portfolio from "../data/portfolio"
+import { assetPath } from '../utils/assetPath.js'
+import { Link } from 'react-router-dom'
+import portfolio from '../data/portfolio'
 
 function Home() {
   const destaques = portfolio.slice(0, 3)
@@ -27,13 +28,14 @@ function Home() {
           <div className="hero-banner-image-wrapper">
 
             <img
-              src="/assets/images/banner-principal.png"
+              src={assetPath('assets/images/banner-principal.png')}
               alt="Gustv Artworks - Bem-vindo ao meu espaço criativo"
               className="hero-banner-image"
             />
 
             {/* Botões sobre o banner */}
             <div className="hero-buttons">
+
               <Link
                 to="/portfolio"
                 className="btn btn-primary btn-lg me-2"
@@ -47,9 +49,11 @@ function Home() {
               >
                 Conhecer Serviços
               </Link>
+
             </div>
 
           </div>
+
         </div>
       </section>
 
@@ -59,6 +63,7 @@ function Home() {
       ======================================== */}
 
       <section className="container py-5">
+
         <div className="row justify-content-center text-center">
 
           <div className="col-lg-9">
@@ -86,6 +91,7 @@ function Home() {
           </div>
 
         </div>
+
       </section>
 
 
@@ -115,6 +121,7 @@ function Home() {
         <div className="row g-4">
 
           {destaques.map((item) => (
+
             <div
               className="col-md-6 col-lg-4"
               key={item.id}
@@ -126,20 +133,23 @@ function Home() {
 
                   <img
                     src={item.imagem}
-                    alt={item.nome}
+                    alt={item.titulo}
                     className="portfolio-highlight-image"
                   />
 
                 </div>
 
+
                 <div className="card-body d-flex flex-column">
 
                   <span className="small text-secondary mb-2">
-                    {item.tipo}
+                    {item.categoria === 'icone'
+                      ? 'Ícone'
+                      : 'Banner'}
                   </span>
 
                   <h3 className="h5 fw-bold">
-                    {item.nome}
+                    {item.titulo}
                   </h3>
 
                   <p className="text-secondary">
@@ -162,6 +172,7 @@ function Home() {
               </div>
 
             </div>
+
           ))}
 
         </div>
@@ -256,52 +267,56 @@ function Home() {
 
           </div>
 
-{/* Combo */}
-<div className="col-md-6 col-lg-4">
 
-  <div className="card service-home-card h-100">
+          {/* Combo */}
+          <div className="col-md-6 col-lg-4">
 
-    <div className="card-body text-center p-4">
+            <div className="card service-home-card h-100">
 
-      <span className="combo-promotion-label mb-3">
-        PROMOÇÃO
-      </span>
+              <div className="card-body text-center p-4">
 
-      <div className="service-icon mb-3">
-        ✨
-      </div>
+                <span className="combo-promotion-label mb-3">
+                  PROMOÇÃO
+                </span>
 
-      <h3 className="h4 fw-bold">
-        Combo
-      </h3>
+                <div className="service-icon mb-3">
+                  ✨
+                </div>
 
-      <div className="service-price mb-1">
-        R$ 25,00
-      </div>
+                <h3 className="h4 fw-bold">
+                  Combo
+                </h3>
 
-      <div className="combo-old-price mb-3">
-        De <span>R$ 30,00</span>
-      </div>
+                <div className="service-price mb-1">
+                  R$ 25,00
+                </div>
 
-      <p className="text-secondary">
-        Ícone + banner personalizados em um único pedido.
-      </p>
+                <div className="combo-old-price mb-3">
+                  De <span>R$ 30,00</span>
+                </div>
 
-    </div>
+                <p className="text-secondary">
+                  Ícone + banner personalizados em um único pedido.
+                </p>
 
-  </div>
+              </div>
 
-</div>
+            </div>
 
-<div className="text-center mt-4">
-  <span className="section-label">
-    PAGAMENTO
-  </span>
+          </div>
 
-  <p className="section-text mt-2">
-    💳 Pagamento via Pix
-  </p>
-</div>
+
+          <div className="text-center mt-4">
+
+            <span className="section-label">
+              PAGAMENTO
+            </span>
+
+            <p className="section-text mt-2">
+              💳 Pagamento via Pix
+            </p>
+
+          </div>
 
         </div>
 
