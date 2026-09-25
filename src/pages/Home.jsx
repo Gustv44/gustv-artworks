@@ -33,25 +33,6 @@ function Home() {
               className="hero-banner-image"
             />
 
-            {/* Botões sobre o banner */}
-            <div className="hero-buttons">
-
-              <Link
-                to="/portfolio"
-                className="btn btn-primary btn-lg me-2"
-              >
-                Ver Portfólio
-              </Link>
-
-              <Link
-                to="/servicos"
-                className="btn btn-outline-light btn-lg"
-              >
-                Conhecer Serviços
-              </Link>
-
-            </div>
-
           </div>
 
         </div>
