@@ -1,10 +1,10 @@
-import { assetPath } from '../utils/assetPath.js'
+import { assetPath } from '../utils/assetPath'
 import { Link } from 'react-router-dom'
+
 import portfolio from '../data/portfolio'
+import PortfolioCarousel from '../components/PortfolioCarousel'
 
 function Home() {
-  const destaques = portfolio.slice(0, 3)
-
   return (
     <div className="home-page">
 
@@ -13,6 +13,7 @@ function Home() {
       ======================================== */}
 
       <section className="hero">
+
         <div className="hero-banner-frame">
 
           {/* Camadas decorativas */}
@@ -23,6 +24,7 @@ function Home() {
           <span className="hero-banner-corner hero-corner-top-right"></span>
           <span className="hero-banner-corner hero-corner-bottom-left"></span>
           <span className="hero-banner-corner hero-corner-bottom-right"></span>
+
 
           {/* Banner */}
           <div className="hero-banner-image-wrapper">
@@ -36,6 +38,7 @@ function Home() {
           </div>
 
         </div>
+
       </section>
 
 
@@ -99,64 +102,9 @@ function Home() {
         </div>
 
 
-        <div className="row g-4">
-
-          {destaques.map((item) => (
-
-            <div
-              className="col-md-6 col-lg-4"
-              key={item.id}
-            >
-
-              <div className="card h-100 portfolio-highlight-card">
-
-                <div className="portfolio-highlight-image-wrapper">
-
-                  <img
-                    src={item.imagem}
-                    alt={item.titulo}
-                    className="portfolio-highlight-image"
-                  />
-
-                </div>
-
-
-                <div className="card-body d-flex flex-column">
-
-                  <span className="small text-secondary mb-2">
-                    {item.categoria === 'icone'
-                      ? 'Ícone'
-                      : 'Banner'}
-                  </span>
-
-                  <h3 className="h5 fw-bold">
-                    {item.titulo}
-                  </h3>
-
-                  <p className="text-secondary">
-                    {item.descricao}
-                  </p>
-
-                  <div className="mt-auto pt-3">
-
-                    <Link
-                      to="/portfolio"
-                      className="btn btn-outline-light"
-                    >
-                      Ver portfólio
-                    </Link>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
+        <PortfolioCarousel
+          projetos={portfolio.slice(0, 6)}
+        />
 
       </section>
 
@@ -287,6 +235,7 @@ function Home() {
           </div>
 
 
+          {/* Pagamento */}
           <div className="text-center mt-4">
 
             <span className="section-label">

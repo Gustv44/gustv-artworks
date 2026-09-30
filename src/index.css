@@ -4019,3 +4019,492 @@ body {
   }
 
 }
+
+/* ========================================
+   CARROSSEL DE PORTFÓLIO - HOME
+======================================== */
+
+.portfolio-carousel {
+  position: relative;
+  width: 100%;
+}
+
+
+/* ========================================
+   ÁREA DESLIZÁVEL
+======================================== */
+
+.portfolio-carousel-viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+}
+
+.portfolio-carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-carousel-viewport:active {
+  cursor: grabbing;
+}
+
+
+/* ========================================
+   TRACK
+======================================== */
+
+.portfolio-carousel-track {
+  display: flex;
+
+  gap: 24px;
+
+  width: max-content;
+
+  padding:
+    10px
+    6px
+    20px;
+}
+
+
+/* ========================================
+   ITEM
+======================================== */
+
+.portfolio-carousel-item {
+  flex: 0 0 calc(
+    (100vw - 120px) / 4.2
+  );
+
+  max-width: 320px;
+
+  scroll-snap-align: start;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.portfolio-carousel-card {
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #17171b;
+
+  border: 1px solid #2a2a30;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* ========================================
+   MOLDURA
+======================================== */
+
+.portfolio-carousel-frame {
+  position: relative;
+
+  padding: 9px;
+}
+
+
+/* Camada roxa */
+
+.portfolio-carousel-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 3px;
+
+  border: 1px solid rgba(139, 92, 246, 0.42);
+
+  border-radius: 9px;
+
+  pointer-events: none;
+}
+
+
+/* Camada azul */
+
+.portfolio-carousel-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border: 1px solid rgba(56, 189, 248, 0.22);
+
+  border-radius: 7px;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.portfolio-carousel-image-wrapper {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #0d0d0f;
+
+  border-radius: 6px;
+}
+
+.portfolio-carousel-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+
+/* ========================================
+   LINHAS
+======================================== */
+
+.portfolio-carousel-line {
+  position: absolute;
+
+  z-index: 4;
+
+  height: 2px;
+
+  border-radius: 999px;
+
+  pointer-events: none;
+}
+
+
+.carousel-line-purple {
+  top: 0;
+  left: 10%;
+
+  width: 28%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8b5cf6,
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(139, 92, 246, 0.55);
+}
+
+
+.carousel-line-blue {
+  bottom: 0;
+  right: 10%;
+
+  width: 28%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(56, 189, 248, 0.45);
+}
+
+
+/* ========================================
+   CANTOS
+======================================== */
+
+.portfolio-carousel-corner {
+  position: absolute;
+
+  z-index: 5;
+
+  width: 16px;
+  height: 16px;
+
+  pointer-events: none;
+}
+
+
+.carousel-corner-tl {
+  top: 0;
+  left: 0;
+
+  border-top: 2px solid #8b5cf6;
+  border-left: 2px solid #8b5cf6;
+}
+
+
+.carousel-corner-tr {
+  top: 0;
+  right: 0;
+
+  border-top: 2px solid #38bdf8;
+  border-right: 2px solid #38bdf8;
+}
+
+
+.carousel-corner-bl {
+  bottom: 0;
+  left: 0;
+
+  border-bottom: 2px solid #38bdf8;
+  border-left: 2px solid #38bdf8;
+}
+
+
+.carousel-corner-br {
+  bottom: 0;
+  right: 0;
+
+  border-bottom: 2px solid #8b5cf6;
+  border-right: 2px solid #8b5cf6;
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+======================================== */
+
+.portfolio-carousel-body {
+  padding: 0 18px 20px;
+}
+
+
+.portfolio-carousel-category {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #a78bfa;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.portfolio-carousel-title {
+  margin-bottom: 8px;
+
+  color: #f5f5f5;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 1rem;
+}
+
+
+.portfolio-carousel-description {
+  margin: 0;
+
+  color: #a0a0a8;
+
+  font-size: 0.82rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   SETAS
+======================================== */
+
+.portfolio-carousel-arrow {
+  position: absolute;
+
+  top: 42%;
+
+  z-index: 10;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(139, 92, 246, 0.45);
+
+  border-radius: 50%;
+
+  background: rgba(13, 13, 15, 0.88);
+
+  color: #f5f5f5;
+
+  font-size: 2rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.portfolio-carousel-arrow:hover {
+  transform: scale(1.08);
+
+  border-color: #8b5cf6;
+
+  background: rgba(23, 23, 27, 0.95);
+
+  box-shadow:
+    0 0 18px rgba(139, 92, 246, 0.18);
+}
+
+
+.portfolio-carousel-prev {
+  left: -20px;
+}
+
+
+.portfolio-carousel-next {
+  right: -20px;
+}
+
+
+/* ========================================
+   HOVER DO CARD
+======================================== */
+
+.portfolio-carousel-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(139, 92, 246, 0.5);
+
+  box-shadow:
+    0 12px 30px rgba(139, 92, 246, 0.10),
+    0 0 30px rgba(56, 189, 248, 0.04);
+}
+
+
+.portfolio-carousel-card:hover
+.portfolio-carousel-image {
+  transform: scale(1.025);
+
+  filter: brightness(1.04);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1199.98px) {
+
+  .portfolio-carousel-item {
+    flex-basis: calc(
+      (100vw - 90px) / 3.1
+    );
+  }
+
+}
+
+
+/* ========================================
+   TABLET PEQUENO
+======================================== */
+
+@media (max-width: 991.98px) {
+
+  .portfolio-carousel-item {
+    flex-basis: calc(
+      (100vw - 70px) / 2.1
+    );
+  }
+
+  .portfolio-carousel-prev {
+    left: -10px;
+  }
+
+  .portfolio-carousel-next {
+    right: -10px;
+  }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 575.98px) {
+
+  .portfolio-carousel-track {
+    gap: 16px;
+  }
+
+  .portfolio-carousel-item {
+    flex-basis: calc(
+      100vw - 70px
+    );
+
+    max-width: none;
+  }
+
+  .portfolio-carousel-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.7rem;
+  }
+
+  .portfolio-carousel-prev {
+    left: -4px;
+  }
+
+  .portfolio-carousel-next {
+    right: -4px;
+  }
+
+}
